@@ -1,19 +1,51 @@
-<!--<div class="container">
-  <div class="row">
-    <div class="col-3">
-      <form (ngSubmit)="onSubmit()">
-        <label>
-          Username: <input type="text" [(ngModel)]="name" name="name" required>
-        </label>
-        <br>
-        <label> Email: <input type="email" [(ngModel)]="email" name="email" required>
-        </label>
-        <br>
-        <label> Password: <input type="password" [(ngModel)]="password" name="password" required>
-        </label>
-        <br>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+<!-- circle back around to possibly add this...??
+
+  <div class="form-group">
+  <label for="username">Username:</label>
+  <input type="text" id="username" formControlName="username">
+  <div *ngIf="form.get('username').hasError('required')" class="error">
+    Username is required.
   </div>
 </div> -->
+
+<div class="container">
+  <div class="row">
+    <h1>Welcome to <span style="color: green;">TASK</span>IT!</h1>
+  </div>
+
+  <!-- The <h1> and teh <h3> below need to be closer together (visually) -->
+
+  <div class="row">
+      <h3>Sign up to get things done.</h3>
+  </div>
+
+<!-- In the form below, all these fields needs to be aligned -->
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="firstname">First Name:</label>
+    <input type="text" id="username" formControlName="username">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="username" formControlName="username">
+  </div>
+
+  <br>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password">
+  </div>
+  <br>
+
+<!-- The <h6> below and btn need to be fixed to right bottom of screen and also sit side-by-side -->
+
+  <h6>Have an account? <span style="color: green;">Login</span></h6>
+  <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>

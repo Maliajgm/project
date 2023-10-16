@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -6,14 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  name: string;
-  email: string;
-  password: string;
+  form: FormGroup;
 
-  onSubmit() {
-    console.log('Signup submitted!');
-    console.log(`Name: ${this.name}`);
-    console.log(`Email: ${this.email}`);
-    console.log(`Password: ${this.password}`);
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      username: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+    });
   }
+
+
+onSubmit() {
+  if (this.form.valid) {
+    const formData = this.form.value;
+    // Submit the form data to your backend or perform any desired action.
+  }
+}
 }

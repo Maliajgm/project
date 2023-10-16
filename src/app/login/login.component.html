@@ -1,1 +1,44 @@
-<p>Sign Up!</p>
+<div class="container">
+  <div class="row">
+    <h1>Welcome Back!</h1>
+      <p>Lets go towork.</p> <!-- <h1> and <p> too far apart vertically -->
+
+
+    <!-- this form needs to be responsive and centered -->
+    <div class="col">
+      <form (ngSubmit)="onSubmit()">
+        <label>
+          <!-- Username: <input type="text" [(ngModel)]="name" name="name" required>  -->
+        </label>
+        <br>
+        <label> Email: <input type="email" [(ngModel)]="email" name="email" required>
+        </label>
+        <br>
+        <br>
+        <label> Password: <input type="password" [(ngModel)]="password" name="password" required>
+        </label>
+
+
+        <br>
+        <br>
+
+        <div class="container">
+          <div class="row">
+
+            <div class="col">
+              <h6>Don't have an account? <span style="color: green;">Sign up</span></h6>
+            </div>
+
+            <!-- the button needs to sit BESIDE the <h6> above -->
+
+            <div class="col">
+              <button type="submit">Submit</button>
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+
+  </div>
+</div>
