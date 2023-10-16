@@ -1,6 +1,28 @@
-.example-container {
-
-  margin: 10px;
-  border: 1px solid #555;
+.h1 {
+  padding: 10px, 10px, 10px, 0px;
 }
+
+.spacer {
+  min-height: 80vh; /* Set a minimum height of 20% of the viewport height */
+  background-color: #f6f4f4; /* Background color for visibility */
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+ }
+
+ .profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
+.login-icon {
+  font-size: 24px; /* Adjust the size as needed */
+}
+
+
 

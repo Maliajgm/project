@@ -1,0 +1,39 @@
+/* Style the container (mat-form-field)  */
+mat-form-field {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style the dropdown button (mat-select)  */
+mat-select {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 6px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Style the selected option (mat-option)  */
+mat-option {
+  border: none;
+  padding: 8px 16px;
+}
+
+/* Hover and focus states for mat-select  */
+mat-select:hover, mat-select:focus {
+  background-color: #cfd2d5; /* Change to your desired  hover/focus background color  */
+  color: #fff;
+}
+
+/* Style selected mat-option  */
+.mat-option-selected {
+  background-color: #007bff; /* Change to your desired  selected option background color */
+  color: #fff;
+}

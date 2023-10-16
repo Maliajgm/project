@@ -1,0 +1,52 @@
+Filter:
+<div class="container">
+  <div class="row">
+
+    <div class="row">
+      <div class="col">col</div>
+      <div class="col">col</div>
+      <div class="col">col</div>
+      <div class="col">col</div>
+    </div>
+
+<!-- was trying the above methode...but overwrite w/css -->
+
+    <div class="col">
+      <mat-form-field>
+        <mat-label>Status</mat-label>
+        <mat-select [(ngModel)]="selectedFilter">
+            <mat-option value="Filter 1">Not Initiated</mat-option>
+            <mat-option value="Filter 2">In Progress</mat-option>
+            <mat-option value="Filter 3">Finished</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="col">
+      <mat-form-field>
+        <mat-label>Date</mat-label>
+        <mat-select [(ngModel)]="selectedFilter">
+            <mat-option value="Filter 1">On Track</mat-option>
+            <mat-option value="Filter 2">Schedule More Time</mat-option>
+            <mat-option value="Filter 3">Past Due</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="col">
+      <mat-form-field>
+        <mat-label>Priority</mat-label>
+        <mat-select [(ngModel)]="selectedFilter">
+            <mat-option value="Filter 1">Yesterday</mat-option>
+            <mat-option value="Filter 2">Today</mat-option>
+            <mat-option value="Filter 3">Tomorrow</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+  </div>
+</div>
+
+
+
+
